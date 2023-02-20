@@ -1,0 +1,12 @@
+footer.footer
+	.footer__bg
+	.container
+		.footer__wrapper
+			a(href="/").footer__logo
+				img(src="./logo.svg", alt="logo" width="270" height="30")
+			nav.footer__nav
+				ul.footer__items
+					each object, key in data.header.menu
+						li.footer__item
+							a.footer__link(href!=object.url)
+								!= object.name

@@ -1,0 +1,35 @@
+// stylelint-disable scss/dollar-variable-empty-line-before
+
+// COLORS
+$color-black: #000;
+$color-white: #fff;
+$color-gray: #eee;
+
+// FONTS
+// stylelint-disable-next-line
+$font-primary: -apple-system, blinkmacsystemfont, "Segoe UI", roboto, oxygen, ubuntu, cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+$html-font-size: 16px;
+
+// EASING TRANSITIONS
+$duration-normal: 0.6s;
+$easing-back-out: cubic-bezier(0.25, 0.74, 0.22, 1.1); // http://cubic-bezier.com/#.25,.74,.22,1.1
+$easing-back-in: cubic-bezier(0.47, -0.1, 0.5, -0.06); // http://cubic-bezier.com/#.47,-0.1,.5,-.06
+$easing-out: ease-out;
+$easing-in: ease-in;
+
+// Settings
+$desktop: 1200;
+$desktop-xl: 1800;
+$laptop: 1440;
+$tablet: 768;
+$mobile: 360;
+$desktop-vh: 750;
+
+
+:root {
+  --primary-color: #f904fc;
+  --secondary-color: #65a0d9;
+  --primary-font: 'TT Supermolot Neue', sans-serif;
+  --secondary-font: 'Fjalla One', sans-serif;
+}
