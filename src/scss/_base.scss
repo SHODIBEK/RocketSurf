@@ -56,14 +56,6 @@ a {
 	color: currentColor;
 }
 
-svg {
-	display: block;
-	flex: 0 0 auto;
-	width: 100%;
-	height: 100%;
-	fill: currentColor;
-}
-
 figure,
 picture {
 	display: inline-block;
@@ -139,6 +131,60 @@ iframe {
 		@include hover {
 			border-image: linear-gradient(to right, var(--primary-color), var(--primary-color)) 1;
 		}
+	}
+}
+
+.title {
+	margin: 0;
+	font-family: var(--secondary-font);
+	font-weight: 400;
+	font-size: rem(40);
+	line-height: 110%;
+	letter-spacing: 0.05em;
+	color: $color-white;
+	text-transform: uppercase;
+
+	&:not(:last-child) {
+		margin-bottom: rem(30);
+	}
+
+	@include tablet {
+		font-size: rem(64);
+		text-align: center;
+
+		&:not(:last-child) {
+			margin-bottom: rem(50);
+		}
+	}
+
+	@include desktop {
+		font-size: rem(84);
+
+		&:not(:last-child) {
+			margin-bottom: rem(100);
+		}
+	}
+}
+
+.subtitle {
+	margin: 0;
+	font-weight: 300;
+	font-size: rem(20);
+	line-height: 150%;
+	letter-spacing: 0.03em;
+	color: $color-white;
+
+	&:not(:last-child) {
+		margin-bottom: 1rem;
+	}
+
+	@include tablet {
+		font-size: rem(24);
+		text-align: center;
+	}
+
+	@include desktop {
+		font-size: rem(32);
 	}
 }
 
