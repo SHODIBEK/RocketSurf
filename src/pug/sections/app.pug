@@ -1,0 +1,56 @@
+section.app.section
+  .container
+    .app__wrapper
+      h2.title(data-aos="fade-up" data-aos-duration="1000")
+        | The Rocket App
+      p.subtitle(data-aos="fade-up" data-aos-duration="1500")
+        | A complete solution for rental businesses. With GPS tracking and real-time performance feedback, the app provides full control and monitoring of your electric surfboard fleet. Upgrade your surfing experience and investment potential with the Rocket App
+      .app__block
+        .app__forDesktop
+          .app__items
+            each app in data.apps[0]
+              .app__item.batch.text-right
+                h5.app__title(data-aos="fade-up" data-aos-duration="1000")!=app.title
+                p.app__subtitle(data-aos="fade-up" data-aos-duration="1500")!=app.subtitle
+          .app__imagewrap
+            span.app__bar.app__bar-left
+              .app__bar-bg.second-counter(data-number="78")
+            span.app__counter.app__counter-left
+              .counts(data-number="78")
+              | %
+            img(src="./images/content/mobile.webp", alt="mobile app").app__image
+            span.app__counter.app__counter-right
+              .counts(data-number="42")
+              | &deg;
+            span.app__bar.app__bar-right 
+              .app__bar-bg.second-counter(data-number="42")
+          .app__items
+            each app in data.apps[1]
+              .app__item.batch.text-left
+                h5.app__title(data-aos="fade-up" data-aos-duration="1000")!=app.title
+                p.app__subtitle(data-aos="fade-up" data-aos-duration="1500")!=app.subtitle
+        .app__forMobile
+          .app__imagewrap
+            span.app__bar.app__bar-left
+              .app__bar-bg.second-counter(data-number="78")
+            span.app__counter.app__counter-left
+              .counts(data-number="78")
+              | %
+            img(src="./images/content/mobile.webp", alt="mobile app").app__image
+            span.app__counter.app__counter-right
+              .counts(data-number="42")
+              | &deg;
+            span.app__bar.app__bar-right 
+              .app__bar-bg.second-counter(data-number="42")
+          .app__items
+            each app in data.apps[0]
+              .app__item.batch
+                h5.app__title(data-aos="fade-up" data-aos-duration="1000")!=app.title
+                p.app__subtitle(data-aos="fade-up" data-aos-duration="1500")!=app.subtitle
+            each app in data.apps[1]
+              .app__item.batch
+                h5.app__title(data-aos="fade-up" data-aos-duration="1000")!=app.title
+                p.app__subtitle(data-aos="fade-up" data-aos-duration="1500")!=app.subtitle
+        .app__buttons
+          a.app__button.btn.btn__content.btn__big(href="#")
+            | More

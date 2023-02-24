@@ -38,23 +38,41 @@
 
 .intro {
   &__block {
-    margin-top: rem(30);
+    padding-top: rem(30);
 
     @include tablet {
-      margin-top: rem(150);
+      padding-top: rem(150);
+    }
+  }
+
+  &__scrolling {
+    @include active {
+      .intro__image {
+        animation: wave 12s linear infinite;
+      } 
     }
   }
 
   &__items {
     display: flex;
     justify-content: center;
-    gap: 51px;
+    gap: rem(25);
+    margin-top: rem(25);
+
+    @include tablet {
+      gap: rem(51);
+    }
   }
 
   &__item {
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 15px;
+
+    @include tablet {
+      flex-direction: row;
+    }
   }
 
   &__icon {
@@ -70,29 +88,845 @@
   &__texts {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
     color: $color-white;
+
+    @include tablet {
+      align-items: flex-start;
+      text-align: left;
+    }
   }
 
   &__strong {
     font-family: var(--secondary-font);
-    font-size: 36px;
+    font-size: rem(16);
     line-height: 110%;
 
     &:not(:last-child) {
       margin-bottom: 5px;
     }
+
+    @include tablet {
+      font-size: rem(36);
+    }
   }
 
   &__desc {
-    font-size: 16px;
+    font-size: rem(14);
     line-height: 110%;
+
+    @include tablet {
+      font-size: rem(16);
+    }
+  }
+
+  &__buttons {
+    margin-top: rem(50);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include tablet {
+      margin-top: rem(100);
+    }
+  }
+
+  &__button {
+    width: 100%;
+
+    @include tablet {
+      padding-left: rem(108);
+      padding-right: rem(108);
+      width: auto;
+    }
   }
 }
 
+.page__col {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: rem(30);
+
+  @include desktop {
+    flex-direction: row;
+    gap: rem(70);
+  }
+
+  &:not(:last-child) {
+    margin-bottom: rem(50);
+
+    @include tablet {
+      margin-bottom: rem(100);
+    }
+
+    @include desktop {
+      margin-bottom: rem(150);
+    }
+  }
+
+  &--reverse {
+    @include desktop {
+      flex-direction: row-reverse;
+    }
+  }
+
+
+  &-image {
+    @include desktop {
+      max-width: 50%;
+    }
+
+    @include mobile {
+      margin-left: rem(-40);
+      margin-right: rem(-40);
+      width: calc(100% + 40px);
+      max-width: unset;
+      height: auto;
+    }
+  }
+
+  &-title {
+    margin: 0;
+    font-weight: 300;
+    font-size: rem(24);
+    line-height: 150%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $color-white;
+
+    &:not(:last-child) {
+      margin-bottom: rem(20);
+    }
+
+    @include tablet {
+      font-size: rem(32);
+    }
+
+    @include desktop {
+      &:not(:last-child) {
+        margin-bottom: rem(30);
+      }
+    }
+  }
+
+  &-subtitle {
+    margin: 0;
+    font-weight: 300;
+    font-size: rem(18);
+    line-height: 150%;
+    letter-spacing: 0.03em;
+    color: $color-white;
+
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+
+    @include tablet {
+      font-size: rem(24);
+    }
+
+    @include desktop {
+      font-size: rem(28);
+    }
+  }
+}
+
+.rotate {
+  &__box {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  &__images {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 50%;
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__slider  {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 1px;
+
+    @include desktop {
+      width: 961px;
+    }
+  }
+
+  &__buttons {
+    margin-top: rem(50);
+    display: flex;
+    justify-content: center;
+
+    @include tablet {
+      margin-top: rem(100);
+    }
+  }
+
+  &__button {
+    width: 100%;
+    @include tablet {
+      width: auto;
+      padding-left: rem(151);
+      padding-right: rem(151);
+    }
+  }
+}
+
+.electric {
+  &__block {
+    margin-top: rem(70);
+    display: flex;
+    flex-direction: column;
+
+    @include tablet {
+      align-items: center;
+    }
+
+    @include desktop {
+      margin-top: rem(100);
+    }
+  }
+
+  &__image {
+    margin-bottom: rem(70);
+
+    @include desktop {
+      margin-top: rem(100);
+    }
+  }
+
+  &__texts {
+    @include tablet {
+      max-width: 80%;
+    }
+
+    @include desktop {
+      max-width: 60%;
+    }
+  }
+
+  &__text {
+    text-align: center;
+
+    &:not(:last-child) {
+      margin-bottom: rem(50);
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 300;
+    font-size: rem(24);
+    line-height: 150%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $color-white;
+    text-align: center;
+
+    &:not(:last-child) {
+      margin-bottom: rem(10);
+    }
+
+    @include tablet {
+      font-size: rem(32);
+    }
+  }
+
+  &__subtitle {
+    margin: 0;
+    font-weight: 300;
+    font-size: rem(18);
+    line-height: 130%;
+    color: $color-white;
+
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+
+    @include tablet {
+      font-size: rem(24);
+    }
+  }
+
+  &__details {
+    margin-top: rem(200);
+
+    @include tablet {
+      margin-top: rem(250);
+    }
+  }
+}
+
+.details {
+  position: relative;
+  &__item {
+    position: absolute;
+    padding-bottom: rem(20);
+
+    @include tablet {
+      padding-bottom: rem(27);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 1px;
+      background-color: var(--primary-color);
+      --dot-width: 9px; 
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: calc(var(--dot-width) / -2);
+      width: var(--dot-width);
+      height: var(--dot-width);
+      border-radius: 50%;
+      background-color: var(--primary-color);
+      --dot-width: 9px;
+      opacity: 0;
+      visibility: hidden;
+      animation: fadeIn 1s linear forwards infinite;
+      transition: 0.3s linear;
+    }
+    
+    &--1 {
+      width: calc(100% - 60px);
+      top: 50px;
+      left: 60px;
+
+      @include tablet {
+        width: calc(100% - 190px);
+        top: 80px;
+        left: 190px;
+      }
+
+      @include desktop {
+        width: calc(100% - 450px);
+        top: 130px;
+        left: 380px;
+      }
+    }
+
+    &--2 {
+      width: calc(100% - 50px);
+      top: 200px;
+      left: 50px;
+
+      @include tablet {
+        width: calc(100% - 150px);
+        top: 260px;
+        left: 150px;
+      }
+
+      @include desktop {
+        width: 55%;
+        top: 360px;
+        left: 390px;
+      }
+    }
+
+    &--3 {
+      width: calc(100% - 70px);
+      top: 310px;
+      left: 70px;
+
+      @include tablet {
+        width: calc(100% - 160px);
+        top: 510px;
+        left: 160px;
+      }
+
+      @include desktop {
+        width: 61%;
+        top: 670px;
+        left: 310px;
+      }
+    }
+
+    &--4 {
+      width: calc(100% - 30px);
+      top: 450px;
+      left: 30px;
+
+      @include tablet {
+        width: calc(100% - 120px);
+        top: 690px;
+        left: 120px;
+      }
+
+      @include desktop {
+        width: calc(100% - 250px);
+        top: 860px;
+        left: 250px;
+      }
+    }
+
+    &--5 {
+      width: calc(100% - 90px);
+      top: 620px;
+      left: 90px;
+
+      @include tablet {
+        width: calc(100% - 200px);
+        top: 900px;
+        left: 200px;
+      }
+
+      @include desktop {
+        width: 60%;
+        top: 1142px;
+        left: 390px;
+      }
+    }
+
+    @include active {
+      .details__rounded {
+        opacity: 1;
+        visibility: visible;
+        transition: 0.3s ease-in-out;
+      }
+
+      .details__text {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        transition: 0.3s ease-in-out;
+        transition-delay: 0.3s;
+      }
+
+      &::after {
+        width: calc(100% - var(--dot-width));
+        transition: 0.3s linear;
+        transition-delay: 0.3s;
+      }
+
+      &::before {
+        opacity: 1;
+        visibility: visible;
+        transition: 0.3s linear;
+        transition-delay: 0.6s;
+      }
+    }
+
+  }
+
+  &__image {
+    height: auto;
+    width: 280px;
+    transform: translateX(-130px);
+
+    @include tablet {
+      width: 364px;
+      transform: translateX(0);
+    }
+    @include desktop {
+      width: 588px;
+    }
+  }
+
+  &__text {
+    font-weight: 300;
+    font-size: rem(16);
+    line-height: 110%;
+    text-align: right;
+    letter-spacing: 0.05em;
+    color: $color-white;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(50px);
+    transition: 0.6s ease-in-out;
+    will-change: transform;
+
+    @include tablet {
+      font-size: rem(24);
+    }
+
+    @include desktop {
+      font-size: rem(36);
+    }
+  }
+
+  &__rounded {
+    position: absolute;
+    left: calc(var(--rounded-width) / -2);
+    bottom: calc(var(--rounded-width) / -2);
+    width: var(--rounded-width);
+    height: var(--rounded-width);
+    background: url('../images/content/ellipse.svg') no-repeat center 100%/100%;
+    animation: rotate360 3s linear forwards infinite;
+    --rounded-width: 36px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+
+    @include tablet {
+      --rounded-width: 54px;
+    }
+  }
+}
+
+.app {
+  &__block {
+    margin-top: rem(100);
+
+    @include tablet {
+      margin-top: rem(200);
+    }
+  }
+
+  &__forDesktop {
+    display: none;
+
+    @include desktop {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 50px;
+    }
+  }
+
+  &__forMobile {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 100px;
+
+    @include tablet {
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 50px;
+    }
+
+    @include desktop {
+      display: none;
+    }
+  }
+
+  &__items {
+    @include desktop {
+      margin-top: rem(130);
+    }
+  }
+
+  &__item {
+
+    @include mobile {
+      text-align: center;
+    }
+    &:not(:last-child) {
+      margin-bottom: rem(30);
+    }
+    @include tablet {
+      &:not(:last-child) {
+        margin-bottom: rem(50);
+      }
+    }
+    @include desktop {
+      &:not(:last-child) {
+        margin-bottom: rem(118);
+      }
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 300;
+    font-size: rem(24);
+    line-height: 110%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: $color-white;
+
+    &:not(:last-child) {
+      margin-bottom: rem(15);
+    }
+
+    @include desktop{
+      font-size: rem(32);
+      &:not(:last-child) {
+        margin-bottom: rem(10);
+      }
+    }
+  }
+
+  &__subtitle {
+    margin: 0;
+    font-weight: 300;
+    font-size: rem(16);
+    line-height: 110%;
+    letter-spacing: 0.05em;
+    color: $color-white;
+
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+
+    @include tablet {
+      font-size: rem(20);
+    }
+
+    @include desktop {
+      font-size: rem(24);
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: rem(100);
+  }
+
+  &__imagewrap {
+    position: relative;
+    justify-self: center;
+    width: 280px;
+    flex: 0 0 280px;
+
+    @include tablet {
+      width: 339px;
+      flex: 0 0 339px;
+    }
+
+    @include desktop {
+      width: 481px;
+      flex: 0 0 481px;
+    }
+  }
+
+  &__bar {
+    position: absolute;
+    top: 105px;
+    width: 31px;
+    height: 345px;
+
+    background-color: white;
+    overflow: hidden;
+    z-index: -1;
+
+    @include tablet {
+      top: 127px;
+      width: 37px;
+      height: 416px;
+    }
+
+    @include desktop {
+      top: 180px;
+      width: 51px;
+      height: 600px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #333;
+    }
+
+    &-left {
+      left: 30px;
+
+      @include tablet {
+        left: 37px;
+      }
+
+      @include desktop {
+        left: 53px;
+      }
+
+      .app__bar-bg {
+        background-color: #34F97D;
+      }
+    }
+
+    &-right {
+      right: 33px;
+
+      @include tablet {
+        right: 42px;
+      }
+
+      @include desktop {
+        right: 59px;
+      }
+
+      .app__bar-bg {
+        background-color: #0397C8;
+      }
+    }
+
+    &-bg {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 0;
+    }
+  }
+
+  &__counter {
+    position: absolute;
+    display: flex;
+    top: 75px;
+    font-size: rem(20);
+    background-color: #fff;
+
+    @include tablet {
+      top: 90px;
+      font-size: rem(29);
+    }
+
+    @include desktop {
+      top: 135px;
+    }
+
+    &-left {
+      left: 28px;
+
+      @include tablet {
+        left: 30px;
+      }
+
+      @include desktop {
+        left: 50px;
+      }
+    }
+
+    &-right {
+      right: 36px;
+
+      @include tablet {
+        right: 40px;
+      }
+
+      @include desktop {
+        right: 65px;
+      }
+    }
+  }
+
+}
+
+.js-rotatebox {
+  input[type=range] {
+    margin: 11px 0;
+    background-color: transparent;
+    -webkit-appearance: none;
+  }
+  input[type=range]:focus {
+    outline: none;
+  }
+  input[type=range]::-webkit-slider-runnable-track {
+    background: #ffffff;
+    border: 1px solid #fff;
+    width: 100%;
+    height: 1px;
+    cursor: pointer;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    margin-top: -12px;
+    width: 24px;
+    height: 24px;
+    background: #f904fc;
+    border: 0px solid rgba(0, 0, 0, 0);
+    border: 0;
+    border-radius: 50px;
+    cursor: pointer;
+    -webkit-appearance: none;
+  }
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #ffffff;
+  }
+  input[type=range]::-moz-range-track {
+    background: #ffffff;
+    border: 2px solid #f904fc;
+    width: 100%;
+    height: 1px;
+    cursor: pointer;
+  }
+  input[type=range]::-moz-range-thumb {
+    width: 24px;
+    height: 24px;
+    background: #f904fc;
+    border: 0px solid rgba(0, 0, 0, 0);
+    border: 0;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+  input[type=range]::-ms-track {
+    background: transparent;
+    border-color: transparent;
+    border-width: 11px 0;
+    color: transparent;
+    width: 100%;
+    height: 1px;
+    cursor: pointer;
+  }
+  input[type=range]::-ms-fill-lower {
+    background: #ffffff;
+    border: 2px solid #f904fc;
+  }
+  input[type=range]::-ms-fill-upper {
+    background: #ffffff;
+    border: 2px solid #f904fc;
+  }
+  input[type=range]::-ms-thumb {
+    width: 24px;
+    height: 24px;
+    background: #f904fc;
+    border: 0px solid rgba(0, 0, 0, 0);
+    border: 0;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 0px;
+    /*Needed to keep the Edge thumb centred*/
+  }
+  input[type=range]:focus::-ms-fill-lower {
+    background: #ffffff;
+  }
+  input[type=range]:focus::-ms-fill-upper {
+    background: #ffffff;
+  }
+  /*TODO: Use one of the selectors from https://stackoverflow.com/a/20541859/7077589 and figure out
+  how to remove the virtical space around the range input in IE*/
+  @supports (-ms-ime-align:auto) {
+    /* Pre-Chromium Edge only styles, selector taken from hhttps://stackoverflow.com/a/32202953/7077589 */
+    input[type=range] {
+      margin: 0;
+      /*Edge starts the margin from the thumb, not the track as other browsers do*/
+    }
+  }
+  
+}
+
 .section {
-  margin: rem(200) 0;
+  margin: rem(100) 0;
+
+  &:last-child {
+    margin-bottom: rem(50);
+  }
 
   @include tablet {
     margin: rem(250) 0;
+
+    &:last-child {
+      margin-bottom: rem(100);
+    }
   }
 }

@@ -1,0 +1,32 @@
+@keyframes rotate360 {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes wave {
+  0% {
+    transform: translate(-1%, -5%) rotate(0);
+  }
+	50% {
+		transform: translate(1%, 5%) rotate(5deg);
+	}
+  100% {
+    transform: translate(-1%, -5%) rotate(0);
+  }
+}

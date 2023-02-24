@@ -1,14 +1,15 @@
 section.intro.section
   .container
-    h2.intro__title.title
+    h2.intro__title.title(data-aos="fade-up" data-aos-duration="1000")
       | Introducing The Rocket Surf
-    p.intro__subtitle.subtitle
+    p.intro__subtitle.subtitle(data-aos="fade-up" data-aos-duration="1500")
       | Innovative electric surfboard that combines cutting-edge technology with the best of the surfing industry. 
       | Designed for surfers, by surfers, Rocket Surf offers a smooth and effortless ride. With its powerful motor and durable construction, surfing has never been easier. Invest in the future of surfing with Rocket Surf, perfect for rental businesses and riders alike. Experience the thrill of Rocket Surf today!
     .intro__block
-      img.intro__image(src="./images/content/surf-1.webp", alt="surf")
+      .intro__scrolling(data-aos="fade-left" data-aos-duration="1000" data-aos-delay="100")
+        img.intro__image(src="./images/content/surf-1.webp", alt="surf")
       .intro__items
-        .intro__item
+        .intro__item(data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100")
           .intro__icon
             svg#eG1ZRjQmKyX1(xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewbox='0 0 71 70' shape-rendering='geometricPrecision' text-rendering='geometricPrecision')
               style.
@@ -36,7 +37,7 @@ section.intro.section
               | 15 HP
             span.intro__desc
               | Electric Engine
-        .intro__item
+        .intro__item(data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200")
           .intro__icon
             svg#eIKyRpHV9Qq1(xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewbox='0 0 70 70' shape-rendering='geometricPrecision' text-rendering='geometricPrecision')
               style.
@@ -53,7 +54,7 @@ section.intro.section
               | 60 KmH
             span.intro__desc
               | Top Speed
-        .intro__item
+        .intro__item(data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400")
           .intro__icon
             svg#eY95SCI17ij1(xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewbox='0 0 70 70' shape-rendering='geometricPrecision' text-rendering='geometricPrecision')
               style(type='text/css').
@@ -68,9 +69,11 @@ section.intro.section
                   path(d='M29.923516,6.3089v27.410048' transform='scale(-1,0.878327) translate(-29.923516,-35.477196)' fill='none' stroke='#fff' stroke-width='2' stroke-linecap='round')
                 path(d='M28.411145,33.5253l9.135733,19.214627' transform='matrix(.923827-.382811 0.382811 0.923827-3.455404 13.455757)' fill='none' stroke='#fff' stroke-width='2' stroke-linecap='round')
                 ellipse(rx='1.266914' ry='1.266914' transform='matrix(1.58548 0 0 1.58548 35.625414 33.069528)' fill='#fff' stroke-width='0')
-
           .intro__texts
             b.intro__strong
               | 40 - 55 min
             span.intro__desc
               | Running Time
+      .intro__buttons
+        button.intro__button.btn.btn__content
+          | Preorder

@@ -279,6 +279,7 @@ html(class=html.classList)&attributes(html.attrs)
 			link(rel='preconnect' href='https://fonts.googleapis.com')
 			link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
 			link(href='https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap' rel='stylesheet')
+			link(rel='stylesheet' href='https://unpkg.com/aos@next/dist/aos.css')
 			link(rel="stylesheet" href!=`${baseDir}css/main.css?v=${Date.now()}`)
 		block head-end
 	body(class=body.classList)&attributes(body.attrs)
@@ -291,6 +292,50 @@ html(class=html.classList)&attributes(html.attrs)
 					script.src = "https://raw.githubusercontent.com/w3c/IntersectionObserver/master/polyfill/intersection-observer.js";
 					document.getElementsByTagName('head')[0].appendChild(script);
 				}
+			script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js")
+			script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js")
+			script(src='https://unpkg.com/aos@next/dist/aos.js')
 			script(src!=`${baseDir}js/vendor.js?v=${Date.now()}`)
 			script(src!=`${baseDir}js/main.js?v=${Date.now()}`)
+			script(src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js")
+			script.
+				rotate([
+					`./images/rotate/360_0540.webp`,
+					`./images/rotate/360_0541.webp`,
+					`./images/rotate/360_0542.webp`,
+					`./images/rotate/360_0543.webp`,
+					`./images/rotate/360_0544.webp`,
+					`./images/rotate/360_0545.webp`,
+					`./images/rotate/360_0546.webp`,
+					`./images/rotate/360_0547.webp`,
+					`./images/rotate/360_0548.webp`,
+					`./images/rotate/360_0549.webp`,
+					`./images/rotate/360_0550.webp`,
+					`./images/rotate/360_0551.webp`,
+					`./images/rotate/360_0552.webp`,
+					`./images/rotate/360_0553.webp`,
+					`./images/rotate/360_0554.webp`,
+					`./images/rotate/360_0555.webp`,
+					`./images/rotate/360_0556.webp`,
+					`./images/rotate/360_0557.webp`,
+					`./images/rotate/360_0558.webp`,
+					`./images/rotate/360_0559.webp`,
+					`./images/rotate/360_0560.webp`,
+					`./images/rotate/360_0561.webp`,
+					`./images/rotate/360_0562.webp`,
+					`./images/rotate/360_0563.webp`,
+					`./images/rotate/360_0564.webp`,
+					`./images/rotate/360_0565.webp`,
+					`./images/rotate/360_0566.webp`,
+					`./images/rotate/360_0567.webp`,
+					`./images/rotate/360_0568.webp`,
+					`./images/rotate/360_0569.webp`,
+					`./images/rotate/360_0570.webp`,
+					`./images/rotate/360_0571.webp`,
+					`./images/rotate/360_0572.webp`,
+					`./images/rotate/360_0573.webp`,
+					`./images/rotate/360_0574.webp`,
+					`./images/rotate/360_0575.webp`,
+					`./images/rotate/360_0576.webp`,
+				])
 		block body-end

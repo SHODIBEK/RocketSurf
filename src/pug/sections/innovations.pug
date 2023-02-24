@@ -1,0 +1,11 @@
+section.innovations.section
+  .container
+    h2.innovations__title.title(data-aos="fade-up" data-aos-duration="1000")
+      | Innovations
+    .innovations__items
+      each innav, index in data.innavations
+        .innovations__item.page__col(class!=index % 2 ? 'page__col--reverse' : '')
+          img.page__col-image(src=`./images/content/${innav.image}.webp`, alt!=innav.title data-aos=index % 2 ? 'fade-left' : 'fade-right' data-aos-duration="1000")
+          .page__col-block
+            h3.page__col-title(data-aos="fade-up" data-aos-duration="1000")!=innav.title
+            p.page__col-subtitle(data-aos="fade-up" data-aos-duration="1500")!=innav.subtitle
