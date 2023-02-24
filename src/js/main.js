@@ -11,6 +11,8 @@ import rotate from './components/rotate';
 
 import './modules/animation';
 
+document.querySelector('video').play();
+
 ieFix();
 vhFix();
 // actualYear();
