@@ -70,6 +70,12 @@
     align-items: center;
     gap: 15px;
 
+    @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+      &:not(:last-child) {
+        margin-right: rem(25);
+      }
+    }
+
     @include tablet {
       flex-direction: row;
     }
