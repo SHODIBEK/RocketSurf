@@ -74,6 +74,12 @@
       &:not(:last-child) {
         margin-right: rem(25);
       }
+
+      @include tablet {
+        &:not(:last-child) {
+          margin-right: rem(51);
+        }
+      }
     }
 
     @include tablet {
@@ -97,6 +103,10 @@
     align-items: center;
     text-align: center;
     color: $color-white;
+
+    @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+      margin-top: rem(15);
+    }
 
     @include tablet {
       align-items: flex-start;
@@ -175,13 +185,35 @@
   &--reverse {
     @include desktop {
       flex-direction: row-reverse;
+
+      @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+        &:not(:last-child) {
+          margin-left: rem(70);
+          margin-right: 0;
+          margin-bottom: 0;
+        }
+      }
     }
   }
 
 
   &-image {
+    @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+      &:not(:last-child) {
+        margin-bottom: rem(30);
+      }
+    }
+
     @include desktop {
       max-width: 50%;
+
+      @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+        &:not(:last-child) {
+          margin-left: 0;
+          margin-right: rem(70);
+          margin-bottom: 0;
+        }
+      }
     }
 
     @include mobile {
